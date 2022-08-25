@@ -1,0 +1,12 @@
+body {
+  font: 20px "Trebuchet MS", Arial, sans-serif;
+}
+
+row {
+  display: flex;
+  flex-direction: row;
+}
+
+.square {
+  height: 100%;
+}
