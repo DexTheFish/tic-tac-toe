@@ -1,7 +1,5 @@
 Classic tic-tac-toe game! Made with Create React App. Built as a fun exercise. Hoping to integrate hiscores and real-time multiplayer in the future.
 
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
