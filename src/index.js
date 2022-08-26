@@ -13,23 +13,25 @@ function Square(props) {
 }
 
 function Board(props) {
+  const [values, setValues] = useState(Array(9).fill(null));
+  console.log(values);
   return (
     <>
       <div>game status</div>
       <div className="row">
-        <Square value={0} />
-        <Square value={1} />
-        <Square value={2} />
+        <Square value={values[0]} />
+        <Square value={values[1]} />
+        <Square value={values[2]} />
       </div>
       <div className="row">
-        <Square value={3} />
-        <Square value={4} />
-        <Square value={5} />
+        <Square value={values[3]} />
+        <Square value={values[4]} />
+        <Square value={values[5]} />
       </div>
       <div className="row">
-        <Square value={6} />
-        <Square value={7} />
-        <Square value={8} />
+        <Square value={values[6]} />
+        <Square value={values[7]} />
+        <Square value={values[8]} />
       </div>
     </>
   );
