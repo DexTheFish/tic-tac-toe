@@ -16,11 +16,13 @@ function Square(props) {
 
 function Board(props) {
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [x, setX] = useState(true);
   console.log(squares);
   const handleClick = (i) => {
     const squaresCopy = squares.slice();
-    squaresCopy[i] = "X";
+    squaresCopy[i] = x ? "X" : "O";
     setSquares(squaresCopy);
+    setX(!x);
   };
   return (
     <>
