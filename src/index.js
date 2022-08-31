@@ -14,7 +14,9 @@ function Square(props) {
 function Board(props) {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [x, setX] = useState(true);
-  console.log(squares);
+  let status = winner(squares)
+    ? `Winner: ${winner(squares)}`
+    : `Next to move: ${x ? "X" : "O"}`;
   const handleClick = (i) => {
     const squaresCopy = squares.slice();
     squaresCopy[i] = x ? "X" : "O";
@@ -24,7 +26,7 @@ function Board(props) {
 
   return (
     <>
-      <div>Next to move: {x ? "X" : "O"}</div>
+      <div>{status}</div>
       <div className="row">
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
