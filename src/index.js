@@ -17,6 +17,7 @@ function Board(props) {
   let status = winner(squares)
     ? `Winner: ${winner(squares)}`
     : `Next to move: ${x ? "X" : "O"}`;
+
   const handleClick = (i) => {
     const squaresCopy = squares.slice();
     if (winner(squares) || squares[i]) {
@@ -44,6 +45,13 @@ function Board(props) {
         <Square value={squares[6]} onClick={() => handleClick(6)} />
         <Square value={squares[7]} onClick={() => handleClick(7)} />
         <Square value={squares[8]} onClick={() => handleClick(8)} />
+      </div>
+      <div>
+        {winner(squares) && (
+          <button onClick={() => setSquares(Array(9).fill(null))}>
+            play again
+          </button>
+        )}
       </div>
     </>
   );
@@ -79,6 +87,9 @@ function winner(squares) {
     ) {
       return squares[line[0]];
     }
+  }
+  if (!squares.includes(null)) {
+    return "Draw!";
   }
   return null;
 }
