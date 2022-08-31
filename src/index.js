@@ -4,9 +4,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 function Square(props) {
-  // props:
-  // value
-  // onClick
   return (
     <button className="square" onClick={props.onClick}>
       {props.value}
@@ -26,7 +23,7 @@ function Board(props) {
   };
   return (
     <>
-      <div>game status</div>
+      <div>Next to move: {x ? "X" : "O"}</div>
       <div className="row">
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
