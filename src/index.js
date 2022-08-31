@@ -19,6 +19,9 @@ function Board(props) {
     : `Next to move: ${x ? "X" : "O"}`;
   const handleClick = (i) => {
     const squaresCopy = squares.slice();
+    if (winner(squares) || squares[i]) {
+      return;
+    }
     squaresCopy[i] = x ? "X" : "O";
     setSquares(squaresCopy);
     setX(!x);
