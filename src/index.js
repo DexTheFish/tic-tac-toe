@@ -54,6 +54,7 @@ function Board(props) {
           <button onClick={() => setSquares(Array(9).fill(null))}>
             play again
           </button>
+          
         )}
       </div>
     </div>
@@ -64,6 +65,10 @@ function Game() {
   return (
     <>
       <Board />
+      <footer>
+      <a href="https://www.github.com/DexTheFish/tic-tac-toe"><img src="../github.png"></img></a>
+      <a href="https://www.dexthefish.com"><img src="../website.png"></img></a>      
+      </footer>
     </>
   );
 }
