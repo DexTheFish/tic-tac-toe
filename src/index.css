@@ -7,7 +7,7 @@ body {
 }
 
 .board {
-  margin: 20%;
+  margin: 32%;
 }
 .row {
   margin: auto;
@@ -37,6 +37,3 @@ body {
 .reset-button button {
   font-size: 30px;
 }
-
-
-
