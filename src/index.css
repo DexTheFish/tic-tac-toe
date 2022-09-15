@@ -1,13 +1,42 @@
-body {
-  font: 20px "Trebuchet MS", Arial, sans-serif;
+html {
+  box-sizing: border-box;
 }
 
+body {
+  font: 16px "Trebuchet MS", Arial, sans-serif;
+}
+
+.board {
+  margin: 20%;
+}
 .row {
+  margin: auto;
   display: flex;
   flex-direction: row;
 }
-
 .square {
-  height: 26px;
-  width: 26px;
+  height: 15vh;
+  width: 15vw;
+  border-radius: 20%;
+  margin: 0.3em 0.3em;
 }
+.square img {
+  height: 80%;
+  width: 80%;
+  background:none;
+}
+
+.status {
+  margin: auto;
+  text-align: center;
+  font-size: 40px;
+}
+.reset-button {
+  margin: auto;
+}
+.reset-button button {
+  font-size: 30px;
+}
+
+
+

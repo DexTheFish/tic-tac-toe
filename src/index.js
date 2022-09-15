@@ -6,7 +6,10 @@ import "./index.css";
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
-      {props.value}
+      {props.value === 'X' && <img src="../x.png"/>}
+      {props.value === 'O' && <img src="../o.png"/>}
+
+      
     </button>
   );
 }
@@ -29,8 +32,8 @@ function Board(props) {
   };
 
   return (
-    <>
-      <div>{status}</div>
+    <div className="board">
+      <div className="status">{status}</div>
       <div className="row">
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
@@ -46,14 +49,14 @@ function Board(props) {
         <Square value={squares[7]} onClick={() => handleClick(7)} />
         <Square value={squares[8]} onClick={() => handleClick(8)} />
       </div>
-      <div>
+      <div className="reset-button">
         {winner(squares) && (
           <button onClick={() => setSquares(Array(9).fill(null))}>
             play again
           </button>
         )}
       </div>
-    </>
+    </div>
   );
 }
 
